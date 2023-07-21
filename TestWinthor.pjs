@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root signature="{24B6FA0B-0143-461A-9758-AEB9E9A9428B}" version="14.0" key="{3C06B731-35F4-412F-90D5-9896039AA7AA}">
+	<children>
+		<child name="Test_SquadCompras" key="{F3DB1838-F6A8-4313-81FD-69BDE1BDA8D4}" path="TestProject1\Test_SquadCompras.mds" />
+	</children>
+	<testItems key="{EE6D6D76-C6D8-4319-9416-13B7CA50D023}">
+		<children>
+			<testItem key="{F3DB1838-F6A8-4313-81FD-69BDE1BDA8D4}" enabled="True" timeout="0" stopOnError="True" description="" />
+		</children>
+	</testItems>
+	<variables key="{BFEA312B-84E2-4B70-958B-69BE1742BAAF}">
+		<data Version="3" />
+	</variables>
+	<analysis key="{212CF0E8-2B75-4A44-8198-93375AE13E51}" />
+	<scc key="{00000000-0000-0000-0000-000000000000}" name="">
+		<data />
+	</scc>
+	<extender key="{1A3FC97E-9A66-4716-B166-35D10B4146E0}">
+		<CrossBrowserTesting Enable="False" />
+	</extender>
+</Root>

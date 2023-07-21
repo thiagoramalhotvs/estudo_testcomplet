@@ -1,0 +1,5 @@
+﻿function fecharFerramenta();
+begin
+  Delay(1500);
+  Sys.Process('PCINF000').VCLObject('frmPrincipal').VCLObject('WallpaperMenuPC1').VCLObject('TBotaoWindow').Click;
+end;

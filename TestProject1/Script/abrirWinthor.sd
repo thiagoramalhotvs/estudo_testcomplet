@@ -1,0 +1,5 @@
+﻿function abrirferramenta();
+begin
+  TestedApps.PCINF000.Run();
+  Delay(4000);
+end;

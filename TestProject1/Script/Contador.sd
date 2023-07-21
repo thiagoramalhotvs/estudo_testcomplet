@@ -1,0 +1,15 @@
+﻿procedure enquanto();
+
+var 
+  contador : integer;
+  
+begin
+  contador := 10;
+  
+  while not (contador = 2) do
+  begin
+    Log.Message(contador);
+    contador := contador -1;
+  end;
+
+end;

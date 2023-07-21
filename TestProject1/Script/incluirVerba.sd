@@ -1,0 +1,18 @@
+﻿uses
+  abrirWinthor,
+  realizarLogin,
+  abrirRotina,
+  dadosTela1801,
+  fecharWinthor;
+
+procedure CrinadoUmaVerba();
+
+begin
+  abrirWinthor.abrirferramenta();
+  realizarLogin.login();
+  abrirRotina.abrirRotina('DDT\Rotina_1801.xlsx');
+  dadosTela1801.CriandoVerbaRebaixaDeCusto();
+  dadosTela1801.fecharRotina();
+  fecharWinthor.fecharFerramenta();  
+
+end;

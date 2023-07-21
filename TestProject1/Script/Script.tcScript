@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root signature="{9252F941-DB23-4FCA-AA50-858B33BB4A19}" version="11.40">
+	<children>
+		<folder name="lib">
+			<folder name="utils">
+				<child name="abrirWinthor" key="{2FB920C9-71A8-41FB-B7D8-58CE57911060}" path="abrirWinthor.sd" />
+				<child name="fecharWinthor" key="{A2D72F45-BA25-4F9C-ACA1-CEF54F57FC25}" path="fecharWinthor.sd" />
+				<child name="acessarPlanilha" key="{9CEC7637-F2BF-4D41-B4D1-BF62BA29B41F}" path="acessarPlanilha.sd" />
+				<child name="realizarLogin" key="{0849EA9C-5234-4F86-ACD3-CCC16C337F1F}" path="realizarLogin.sd" />
+			</folder>
+		</folder>
+		<folder name="tests">
+			<folder name="rotina_1801">
+				<child name="incluirVerba" key="{A16D3ABB-F1E9-4203-A610-D32C0ECD3003}" path="incluirVerba.sd" />
+			</folder>
+		</folder>
+		<folder name="pageObject">
+			<folder name="rotina_1801">
+				<child name="dadosTela1801" key="{A4088F8A-CA49-4777-B6D9-ACF3623E7145}" path="dadosTela1801.sd" />
+			</folder>
+			<folder name="home">
+				<child name="abrirRotina" key="{7D987590-8F79-4418-901B-8782165D7322}" path="abrirRotina.sd" />
+			</folder>
+		</folder>
+	</children>
+</Root>

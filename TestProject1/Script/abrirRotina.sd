@@ -1,0 +1,14 @@
+﻿uses
+  acessarPlanilha;
+
+function abrirRotina(rotaRotina : string);
+
+var numeroRotina, dadosPlanilha : OleVariant;
+
+begin
+  dadosPlanilha := acessarPlanilha.AbrirPlanilha(rotaRotina, 'DADOS');
+  numeroRotina := dadosPlanilha.Value['ROTINA'];
+
+  Sys.Process('PCINF000').VCLObject('frmPrincipal').VCLObject('WallpaperMenuPC1').VCLObject('edtCodigoRotina').Keys(numeroRotina + '[Enter]')  
+
+end;

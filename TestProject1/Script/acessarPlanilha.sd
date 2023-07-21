@@ -1,0 +1,8 @@
+﻿function AbrirPlanilha(PsCaminho, PsAba : string);
+  var vsCaminho: string;
+  begin
+    Log.Message('Converter o caminho relativo para o caminho absoluto do caminho da planilha'); 
+    vsCaminho := Project.Path + PsCaminho;
+    Result := DDT.ExcelDriver(vsCaminho,PsAba);
+    Log.Message(vsCaminho);
+  end;

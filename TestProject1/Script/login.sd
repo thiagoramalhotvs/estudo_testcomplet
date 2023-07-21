@@ -1,0 +1,12 @@
+﻿procedure login();
+begin
+  TestedApps.PCINF000.Run();
+  Delay(4000);
+  Sys.Process('PCINF000').VCLObject('frmLogin').VCLObject('edtNome').Keys('PCADMIN');
+  Sys.Process('PCINF000').VCLObject('frmLogin').VCLObject('edtSenha').Keys('1');
+  Sys.Process('PCINF000').VCLObject('frmLogin').VCLObject('pnlLojaEmpresa').VCLObject('Panel1').VCLObject('cbBanco').Keys('LOCAL');
+  Delay(1000);
+  Sys.Process('PCINF000').VCLObject('frmLogin').VCLObject('pnlLojaEmpresa').VCLObject('Panel2').VCLObject('cbEsquema').Keys('LOCAL');
+  Delay(1000);
+  Sys.Process('PCINF000').VCLObject('frmLogin').VCLObject('imgEntrar').Click;
+end;
