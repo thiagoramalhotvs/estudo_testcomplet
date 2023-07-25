@@ -1,0 +1,17 @@
+﻿uses
+  AbrirRotina,
+  AppWinthor,
+  IncluirVerba_Logic,
+  RealizarLogin;
+
+procedure IncluirVerbaOutras();
+  begin
+    AppWinthor.AbrirWinthor();
+    RealizarLogin.RealizarLogin();
+
+    AbrirRotina.AbrirRotina('1801');
+    IncluirVerba_Logic.IncluindoVerbaOutras();
+
+    IncluirVerba_Logic.FecharRotina();
+    AppWinthor.FecharWinthor(); 
+  end;

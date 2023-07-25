@@ -1,0 +1,31 @@
+﻿uses
+  AcessarPlanilha,
+  Objects1801;
+  
+var dadosPlanilha : OleVariant;
+
+procedure IncluindoVerbaOutras();
+  begin
+    dadosPlanilha := AcessarPlanilha.AcessarPlanilha('DDT\Rotina_1801.xlsx', 'DADOS');  
+  
+    Objects1801.btnIncluir.Click();
+    Objects1801.cmbFilial.Click();
+    Objects1801.btnFilial.Click();
+    Objects1801.btnTipoVerba.Window('TGroupButton', dadosPlanilha.Value['TIPOVERBA'], 3).Click();
+    Objects1801.psqEdtFornecedor.Keys(dadosPlanilha.Value['FORNECEDOR'] + '[Enter]');
+    Objects1801.psqEdtComprador.Keys(dadosPlanilha.Value['COMPRADOR'] + '[Enter]');
+    Objects1801.edtDTVENC.Keys(dadosPlanilha.Value['DTVENC']);
+    Objects1801.dbEditValorVerba.Keys(dadosPlanilha.Value['VALOR']);
+    Objects1801.dbgFPGTO.Window('TGroupButton', dadosPlanilha.Value['FPGTO'], 1).Click();
+    Objects1801.dbHistorico1.Keys(dadosPlanilha.Value['HISTORICO']);
+    Objects1801.psqCONTA.Keys(dadosPlanilha.Value['CONTA'] + '[Enter]');
+    Objects1801.btnGravar.Click();
+    Objects1801.btnSim.VCLObject(dadosPlanilha.Value['CONFIRMACAO']).Click();
+    Objects1801.btnNao.VCLObject(dadosPlanilha.Value['IMPCONTRATO']).Click();
+
+  end;
+
+procedure FecharRotina();
+  begin
+    Objects1801.btnFecharRotina.Click();
+  end;

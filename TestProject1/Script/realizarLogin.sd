@@ -1,12 +1,15 @@
-﻿procedure login();
-begin
-  Sys.Process('PCINF000').VCLObject('frmLogin').VCLObject('edtNome').Keys('PCADMIN');
-  Sys.Process('PCINF000').VCLObject('frmLogin').VCLObject('edtSenha').Keys('1');
-  Sys.Process('PCINF000').VCLObject('frmLogin').VCLObject('pnlLojaEmpresa').VCLObject('Panel1').VCLObject('cbBanco').Keys('LOCAL');
-  Delay(1000);
-  Sys.Process('PCINF000').VCLObject('frmLogin').VCLObject('pnlLojaEmpresa').VCLObject('Panel2').VCLObject('cbEsquema').Keys('LOCAL');
-  Delay(1000);
-  Sys.Process('PCINF000').VCLObject('frmLogin').VCLObject('imgEntrar').Click;
-end;
+﻿uses
+  ObjectsLogin;
+  
+procedure RealizarLogin();
+  begin
+    ObjectsLogin.edtUsuario.Keys('PCADMIN');
+    ObjectsLogin.edtSenha.Keys('1');
+    ObjectsLogin.cbLoja.Keys('LOCAL');
+    Delay(1000);
+    ObjectsLogin.cbEmpresa.Keys('LOCAL');
+    Delay(1000);
+    ObjectsLogin.btnEntrar.Click;
+  end;
   
   
