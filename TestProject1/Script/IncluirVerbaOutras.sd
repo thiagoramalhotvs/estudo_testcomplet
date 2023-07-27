@@ -13,6 +13,8 @@ procedure IncluirVerbaOutras();
     AbrirRotina.AbrirRotina('1801');
 
     IncluirVerbaLogic.IncluindoVerbaOutras();
+    
+    IncluirVerbaLogic.ConfirmarAdicaoVerba();
 
     IncluirVerbaLogic.FecharRotina();
 
