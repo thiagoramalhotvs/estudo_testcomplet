@@ -1,30 +1,25 @@
-﻿const
-  btnIncluir = Sys.Process('PCSIS1801').VCLObject('frmPCINF1801').VCLObject('WallpaperRotinaPC1').VCLObject('sbxFormulario').VCLObject('Panel1').VCLObject('btnNOVO');
-  
-  cmbFilial = Sys.Process('PCSIS1801').VCLObject('frmPCINF1801').VCLObject('WallpaperRotinaPC1').VCLObject('sbxFormulario').VCLObject('cmbFILIAL');
+﻿Var btnIncluir, cmbFilial, btnFilial, btnTipoVerba, psqEdtFornecedor, psqEdtComprador, edtDTVENC, dbEditValorVerba, dbgFPGTO, dbHistorico1, psqCONTA,
+    btnGravar, btnSim, btnNao, btnFecharRotina : OleVariant;
 
-  btnFilial = Sys.Process('PCSIS1801').Window('TPopupDataList', '', 1);
+procedure DefinirVariaveis();
+  begin
+    btnIncluir := Sys.Process('PCSIS1801').VCLObject('frmPCINF1801').VCLObject('WallpaperRotinaPC1').VCLObject('sbxFormulario').VCLObject('Panel1').VCLObject('btnNOVO');
+    cmbFilial := Sys.Process('PCSIS1801').VCLObject('frmPCINF1801').VCLObject('WallpaperRotinaPC1').VCLObject('sbxFormulario').VCLObject('cmbFILIAL');
+    btnFilial := Sys.Process('PCSIS1801');
+    btnTipoVerba := Sys.Process('PCSIS1801').VCLObject('frmPCINF1801').VCLObject('WallpaperRotinaPC1').VCLObject('sbxFormulario').VCLObject('rdgTipoVerba');
+    psqEdtFornecedor := Sys.Process('PCSIS1801').VCLObject('frmPCINF1801').VCLObject('WallpaperRotinaPC1').VCLObject('sbxFormulario').VCLObject('PsqEdtFornecedor');
+    psqEdtComprador := Sys.Process('PCSIS1801').VCLObject('frmPCINF1801').VCLObject('WallpaperRotinaPC1').VCLObject('sbxFormulario').VCLObject('PsqEdtComprador');
+    edtDTVENC := Sys.Process('PCSIS1801').VCLObject('frmPCINF1801').VCLObject('WallpaperRotinaPC1').VCLObject('sbxFormulario').VCLObject('edtDTVENC');
+    dbEditValorVerba := Sys.Process('PCSIS1801').VCLObject('frmPCINF1801').VCLObject('WallpaperRotinaPC1').VCLObject('sbxFormulario').VCLObject('dbEditValorVerba');
+    dbgFPGTO := Sys.Process('PCSIS1801').VCLObject('frmPCINF1801').VCLObject('WallpaperRotinaPC1').VCLObject('sbxFormulario').VCLObject('dbgFPGTO');
+    dbHistorico1 := Sys.Process('PCSIS1801').VCLObject('frmPCINF1801').VCLObject('WallpaperRotinaPC1').VCLObject('sbxFormulario').VCLObject('dbHistorico1');
+    psqCONTA := Sys.Process('PCSIS1801').VCLObject('frmPCINF1801').VCLObject('WallpaperRotinaPC1').VCLObject('sbxFormulario').VCLObject('gbConta').VCLObject('psqCONTA');
+    btnGravar := Sys.Process('PCSIS1801').VCLObject('frmPCINF1801').VCLObject('WallpaperRotinaPC1').VCLObject('sbxFormulario').VCLObject('Panel1').VCLObject('btnGravar');
+    btnSim := Sys.Process('PCSIS1801');
+    btnNao := Sys.Process('PCSIS1801');
+    btnFecharRotina := Sys.Process('PCSIS1801').VCLObject('frmPCINF1801').VCLObject('WallpaperRotinaPC1').VCLObject('sbxFormulario').VCLObject('Panel1').VCLObject('BitBtn3');
+  end;
 
-  btnTipoVerba = Sys.Process('PCSIS1801').VCLObject('frmPCINF1801').VCLObject('WallpaperRotinaPC1').VCLObject('sbxFormulario').VCLObject('rdgTipoVerba');
 
-  psqEdtFornecedor = Sys.Process('PCSIS1801').VCLObject('frmPCINF1801').VCLObject('WallpaperRotinaPC1').VCLObject('sbxFormulario').VCLObject('PsqEdtFornecedor');
 
-  psqEdtComprador = Sys.Process('PCSIS1801').VCLObject('frmPCINF1801').VCLObject('WallpaperRotinaPC1').VCLObject('sbxFormulario').VCLObject('PsqEdtComprador');
 
-  edtDTVENC = Sys.Process('PCSIS1801').VCLObject('frmPCINF1801').VCLObject('WallpaperRotinaPC1').VCLObject('sbxFormulario').VCLObject('edtDTVENC');
-
-  dbEditValorVerba = Sys.Process('PCSIS1801').VCLObject('frmPCINF1801').VCLObject('WallpaperRotinaPC1').VCLObject('sbxFormulario').VCLObject('dbEditValorVerba');
-
-  dbgFPGTO = Sys.Process('PCSIS1801').VCLObject('frmPCINF1801').VCLObject('WallpaperRotinaPC1').VCLObject('sbxFormulario').VCLObject('dbgFPGTO');
-
-  dbHistorico1 = Sys.Process('PCSIS1801').VCLObject('frmPCINF1801').VCLObject('WallpaperRotinaPC1').VCLObject('sbxFormulario').VCLObject('dbHistorico1');
-
-  psqCONTA = Sys.Process('PCSIS1801').VCLObject('frmPCINF1801').VCLObject('WallpaperRotinaPC1').VCLObject('sbxFormulario').VCLObject('gbConta').VCLObject('psqCONTA');
-
-  btnGravar = Sys.Process('PCSIS1801').VCLObject('frmPCINF1801').VCLObject('WallpaperRotinaPC1').VCLObject('sbxFormulario').VCLObject('Panel1').VCLObject('btnGravar');
-  
-  btnSim = Sys.Process('PCSIS1801').Window('TMessageForm', 'Confirmação', 1);
-
-  btnNao = Sys.Process('PCSIS1801').Window('TMessageForm', 'Confirmação', 1);
-  
-  btnFecharRotina = Sys.Process('PCSIS1801').VCLObject('frmPCINF1801').VCLObject('WallpaperRotinaPC1').VCLObject('sbxFormulario').VCLObject('Panel1').VCLObject('BitBtn3');

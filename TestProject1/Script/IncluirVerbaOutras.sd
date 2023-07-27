@@ -1,17 +1,20 @@
 ﻿uses
-  AbrirRotina,
   AppWinthor,
-  IncluirVerba_Logic,
-  RealizarLogin;
+  RealizarLogin,
+  AbrirRotina,
+  IncluirVerbaLogic;
 
 procedure IncluirVerbaOutras();
   begin
     AppWinthor.AbrirWinthor();
+
     RealizarLogin.RealizarLogin();
 
     AbrirRotina.AbrirRotina('1801');
-    IncluirVerba_Logic.IncluindoVerbaOutras();
 
-    IncluirVerba_Logic.FecharRotina();
+    IncluirVerbaLogic.IncluindoVerbaOutras();
+
+    IncluirVerbaLogic.FecharRotina();
+
     AppWinthor.FecharWinthor(); 
   end;

@@ -1,7 +1,8 @@
 ﻿uses
   ObjectsHome;
 
-function AbrirRotina(numeroRotina : string);
+procedure AbrirRotina(numeroRotina : string);
   begin
+    ObjectsHome.DefinirVariaveis();
     ObjectsHome.psqRotina.Keys(numeroRotina + '[Enter]')  
   end;

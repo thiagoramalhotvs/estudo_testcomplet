@@ -8,9 +8,8 @@
 				<child name="RealizarLogin" key="{0849EA9C-5234-4F86-ACD3-CCC16C337F1F}" path="RealizarLogin.sd" />
 				<child name="AbrirRotina" key="{7D987590-8F79-4418-901B-8782165D7322}" path="AbrirRotina.sd" />
 			</folder>
-			<folder name="DataBase" />
 		</folder>
-		<folder name="Tests">
+		<folder name="Cenarios">
 			<folder name="Rotina_1801">
 				<child name="IncluirVerbaOutras" key="{A16D3ABB-F1E9-4203-A610-D32C0ECD3003}" path="IncluirVerbaOutras.sd" />
 			</folder>
@@ -28,7 +27,7 @@
 		</folder>
 		<folder name="Logic">
 			<folder name="Rotina_1801">
-				<child name="IncluirVerba_Logic" key="{A4088F8A-CA49-4777-B6D9-ACF3623E7145}" path="IncluirVerba_Logic.sd" />
+				<child name="IncluirVerbaLogic" key="{A4088F8A-CA49-4777-B6D9-ACF3623E7145}" path="IncluirVerbaLogic.sd" />
 			</folder>
 		</folder>
 	</children>

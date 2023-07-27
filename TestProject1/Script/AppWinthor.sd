@@ -1,11 +1,15 @@
-﻿function AbrirWinthor();
+﻿uses
+  ObjectsHome;
+
+procedure AbrirWinthor();
   begin
     TestedApps.PCINF000.Run();
     Delay(4000);
   end;
   
-function FecharWinthor();
+procedure FecharWinthor();
   begin
+    ObjectsHome.DefinirVariaveis();
     Delay(1500);
-    Sys.Process('PCINF000').VCLObject('frmPrincipal').VCLObject('WallpaperMenuPC1').VCLObject('TBotaoWindow').Click;
+    ObjectsHome.btnFechar.Click();
   end;
