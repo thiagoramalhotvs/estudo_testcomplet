@@ -3,13 +3,15 @@
   
 procedure RealizarLogin();
   begin
+    ObjectsLogin.DefinirVariaveis();  
+  
     ObjectsLogin.edtUsuario.Keys('PCADMIN');
     ObjectsLogin.edtSenha.Keys('1');
     ObjectsLogin.cbLoja.Keys('LOCAL');
     Delay(1000);
     ObjectsLogin.cbEmpresa.Keys('LOCAL');
     Delay(1000);
-    ObjectsLogin.btnEntrar.Click;
+    ObjectsLogin.btnEntrar.Click();
   end;
   
   

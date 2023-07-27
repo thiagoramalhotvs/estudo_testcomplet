@@ -1,10 +1,14 @@
-﻿const
-  edtUsuario = Sys.Process('PCINF000').VCLObject('frmLogin').VCLObject('edtNome');
-  
-  edtSenha = Sys.Process('PCINF000').VCLObject('frmLogin').VCLObject('edtSenha');
-  
-  cbLoja = Sys.Process('PCINF000').VCLObject('frmLogin').VCLObject('pnlLojaEmpresa').VCLObject('Panel1').VCLObject('cbBanco');
-  
-  cbEmpresa = Sys.Process('PCINF000').VCLObject('frmLogin').VCLObject('pnlLojaEmpresa').VCLObject('Panel2').VCLObject('cbEsquema');
-  
-  btnEntrar = Sys.Process('PCINF000').VCLObject('frmLogin').VCLObject('imgEntrar');
+﻿Var edtUsuario, edtSenha, cbLoja, cbEmpresa, btnEntrar : OleVariant;
+
+procedure DefinirVariaveis();
+  begin
+    edtUsuario := Sys.Process('PCINF000').VCLObject('frmLogin').VCLObject('edtNome');
+    edtSenha := Sys.Process('PCINF000').VCLObject('frmLogin').VCLObject('edtSenha');
+    cbLoja := Sys.Process('PCINF000').VCLObject('frmLogin').VCLObject('pnlLojaEmpresa').VCLObject('Panel1').VCLObject('cbBanco');
+    cbEmpresa := Sys.Process('PCINF000').VCLObject('frmLogin').VCLObject('pnlLojaEmpresa').VCLObject('Panel2').VCLObject('cbEsquema');
+    btnEntrar := Sys.Process('PCINF000').VCLObject('frmLogin').VCLObject('imgEntrar');
+  end;
+
+
+
+

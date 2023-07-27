@@ -1,2 +1,9 @@
-﻿const
-  psqRotina = Sys.Process('PCINF000').VCLObject('frmPrincipal').VCLObject('WallpaperMenuPC1').VCLObject('edtCodigoRotina');
+﻿Var psqRotina, edtSenha, btnFechar : OleVariant;
+
+procedure DefinirVariaveis();
+  begin
+    psqRotina := Sys.Process('PCINF000').VCLObject('frmPrincipal').VCLObject('WallpaperMenuPC1').VCLObject('edtCodigoRotina');
+    btnFechar := Sys.Process('PCINF000').VCLObject('frmPrincipal').VCLObject('WallpaperMenuPC1').VCLObject('TBotaoWindow');
+  end;
+
+

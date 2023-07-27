@@ -9,12 +9,7 @@
 	</children>
 	<config language="{9E432E59-33EF-4EAA-95C6-63FC35AF69EE}" />
 	<testItems key="{F2F4FD13-771A-4D1D-AED2-2C8F1876BFAB}" version="14">
-		<children>
-			<testItem name="ProjectTestItem1" key="{5AFD171F-0C7F-4C26-A154-DEC4B3875050}" group="False" enabled="True" testMoniker="{0849EA9C-5234-4F86-ACD3-CCC16C337F1F}test" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True">
-				<testParameters />
-				<children />
-			</testItem>
-		</children>
+		<children />
 	</testItems>
 	<variables key="{E667DA7D-D46C-423E-BC96-E1707E28C911}">
 		<data Version="3" />
@@ -277,7 +272,7 @@
 			</columns>
 			<data />
 		</setting>
-		<setting name="Playback_ErrHandling_OnError" type="6" rowIndex="0" colIndex="1">
+		<setting name="Playback_ErrHandling_OnError" type="6" rowIndex="1" colIndex="1">
 			<columns>
 				<column type="5" enabled="True" />
 				<column type="2" enabled="True" />
@@ -329,7 +324,7 @@
 		<setting name="Playback_Runtime_DisableMouse" type="1" value="False" />
 		<setting name="Playback_Runtime_MinimizeBeforePlayback" type="1" value="False" />
 		<setting name="Playback_Runtime_UseCaseSensitiveParameters" type="1" value="False" />
-		<setting name="Playback_StopOnError" type="1" value="False" />
+		<setting name="Playback_StopOnError" type="1" value="True" />
 		<setting name="Playback_StopOnObjectRecognitionError" type="1" value="False" />
 		<setting name="Playback_StopOnWarning" type="1" value="False" />
 		<setting name="Playback_UnexpectedWndHandling_ClickOnFocusedControl" type="1" value="True" />
