@@ -1,5 +1,5 @@
 ﻿Var btnIncluir, cmbFilial, btnFilial, btnTipoVerba, psqEdtFornecedor, psqEdtComprador, edtDTVENC, dbEditValorVerba, dbgFPGTO, dbHistorico1, psqCONTA,
-    btnGravar, btnSim, btnNao, btnFecharRotina : OleVariant;
+    btnGravar, btnSim, btnNao, msgPopupConfirme, btnFecharRotina : OleVariant;
 
 procedure DefinirVariaveis();
   begin
@@ -17,9 +17,8 @@ procedure DefinirVariaveis();
     btnGravar := Sys.Process('PCSIS1801').VCLObject('frmPCINF1801').VCLObject('WallpaperRotinaPC1').VCLObject('sbxFormulario').VCLObject('Panel1').VCLObject('btnGravar');
     btnSim := Sys.Process('PCSIS1801');
     btnNao := Sys.Process('PCSIS1801');
+    msgPopupConfirme := Sys.Process('PCSIS1801');
     btnFecharRotina := Sys.Process('PCSIS1801').VCLObject('frmPCINF1801').VCLObject('WallpaperRotinaPC1').VCLObject('sbxFormulario').VCLObject('Panel1').VCLObject('BitBtn3');
   end;
-
-
 
 

@@ -1,9 +1,10 @@
 ﻿uses
-  AcessarPlanilha,
-  Objects1801;
+  AcessarPlanilha, Objects1801;
+
+var 
+  dadosPlanilha : OleVariant;
   
 procedure IncluindoVerbaOutras();
-  var dadosPlanilha : OleVariant;
   begin
     Objects1801.DefinirVariaveis();
     dadosPlanilha := AcessarPlanilha.AcessarPlanilha('DDT\Rotina_1801.xlsx', 'DADOS');  
@@ -19,9 +20,23 @@ procedure IncluindoVerbaOutras();
     Objects1801.dbgFPGTO.Window('TGroupButton', dadosPlanilha.Value['FPGTO'], 1).Click();
     Objects1801.dbHistorico1.Keys(dadosPlanilha.Value['HISTORICO']);
     Objects1801.psqCONTA.Keys(dadosPlanilha.Value['CONTA'] + '[Enter]');
-    Objects1801.btnGravar.Click();
-    Objects1801.btnSim.Window('TMessageForm', 'Confirmação', 1).VCLObject(dadosPlanilha.Value['CONFIRMACAO']).Click();
-    Objects1801.btnNao.Window('TMessageForm', 'Confirmação', 1).VCLObject(dadosPlanilha.Value['IMPCONTRATO']).Click();
+    Objects1801.btnGravar.Click();  
+  end;
+  
+procedure ConfirmarAdicaoVerba();
+  begin
+    if Objects1801.msgPopupConfirme.Window('TMessageForm', 'Confirmação', 1).VCLObject('Message').VisibleOnScreen then 
+      begin
+        Log.Checkpoint('Mensagem de confirmação OK');
+        Objects1801.btnSim.Window('TMessageForm', 'Confirmação', 1).VCLObject(dadosPlanilha.Value['CONFIRMACAO']).Click();
+        Objects1801.btnNao.Window('TMessageForm', 'Confirmação', 1).VCLObject(dadosPlanilha.Value['IMPCONTRATO']).Click();
+        if not Objects1801.btnIncluir.Enabled then
+          begin  
+            Log.Error('Botão de iniciar não ficou diposnivel novamente'); 
+          end else 
+            Log.Checkpoint('Botão de iniciar ficou diposnivel novamente')
+      end else
+        Log.Error('Mensagem de confirmação não apareceu NOK');
   end;
 
 procedure FecharRotina();

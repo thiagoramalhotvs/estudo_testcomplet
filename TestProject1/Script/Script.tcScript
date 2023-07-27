@@ -9,7 +9,7 @@
 				<child name="AbrirRotina" key="{7D987590-8F79-4418-901B-8782165D7322}" path="AbrirRotina.sd" />
 			</folder>
 		</folder>
-		<folder name="Cenarios">
+		<folder name="Test">
 			<folder name="Rotina_1801">
 				<child name="IncluirVerbaOutras" key="{A16D3ABB-F1E9-4203-A610-D32C0ECD3003}" path="IncluirVerbaOutras.sd" />
 			</folder>
