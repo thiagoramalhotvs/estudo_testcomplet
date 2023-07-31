@@ -1,0 +1,16 @@
+﻿uses
+  ConnectionDB;
+
+function SelectVerbaAdicionada();
+  var qry : OleVariant;
+  
+  begin
+    qry := ConnectionDB.ConnectionDB();
+    qry.SQL := 'SELECT * FROM PCVERBA WHERE NUMVERBA = (SELECT MAX(NUMVERBA) FROM PCVERBA)';
+    
+    qry.open;
+    
+    result: = qry.FieldByName('REFERENCIA').AsString;
+    
+    qry.Close;
+  end;

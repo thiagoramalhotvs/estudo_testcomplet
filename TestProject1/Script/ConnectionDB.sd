@@ -1,0 +1,12 @@
+﻿function ConnectionDB();
+  var 
+    connection, strConnection : OleVariant;
+    
+  begin
+    connection := ADO.CreateADOQuery;
+    strConnection := 'Dsn=LOCAL;uid=LOCAL;Password=LOCAL';
+    
+    connection.ConnectionString := strConnection;
+    
+    result := connection;
+  end;

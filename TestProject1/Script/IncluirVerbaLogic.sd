@@ -1,5 +1,5 @@
 ﻿uses
-  AcessarPlanilha, Objects1801;
+  AcessarPlanilha, Objects1801, Querys1801;
 
 var 
   dadosPlanilha : OleVariant;
@@ -37,6 +37,20 @@ procedure ConfirmarAdicaoVerba();
             Log.Checkpoint('Botão de iniciar ficou diposnivel novamente')
       end else
         Log.Error('Mensagem de confirmação não apareceu NOK');
+  end;
+  
+procedure ValidaDB();
+  var value : OleVariant;
+  begin
+    value := Querys1801.SelectVerbaAdicionada();
+    
+    if (value = dadosPlanilha.Value['HISTORICO']) then 
+      begin
+      Log.Checkpoint('Verba incluida com sucesso');
+      end else 
+        begin
+          Log.Error('Verba não incluida na base de dados');
+        end;
   end;
 
 procedure FecharRotina();

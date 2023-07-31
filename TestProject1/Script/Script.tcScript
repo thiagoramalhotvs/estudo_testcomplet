@@ -7,6 +7,10 @@
 				<child name="AcessarPlanilha" key="{9CEC7637-F2BF-4D41-B4D1-BF62BA29B41F}" path="AcessarPlanilha.sd" />
 				<child name="RealizarLogin" key="{0849EA9C-5234-4F86-ACD3-CCC16C337F1F}" path="RealizarLogin.sd" />
 				<child name="AbrirRotina" key="{7D987590-8F79-4418-901B-8782165D7322}" path="AbrirRotina.sd" />
+				<child name="ConnectionDB" key="{9EE8700D-0054-4B7F-9C42-7D0356E154E0}" path="ConnectionDB.sd" />
+			</folder>
+			<folder name="DataBase">
+				<child name="Querys1801" key="{A5038E14-37A0-41EF-8891-CF5B1048F3A7}" path="Querys1801.sd" />
 			</folder>
 		</folder>
 		<folder name="Test">
